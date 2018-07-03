@@ -1,0 +1,5 @@
+secret.py
+*.csv
+Pandas_Data_Frame
+check.py
+__pycache__
