@@ -74,7 +74,7 @@ class Csv_To_Pandas:
         '''
         KABU+のページとリンクしている共有フォルダからCSVデータを取得、必要な情報のみに修正している。
         '''
-        dir , prices , results , ratio = Secret().MyDir()
+        dir , prices , results , ratio , daily = Secret().MyDir()
         df_all = pd.read_csv(prices , encoding = 'shift-jis')#別のcsvから時価総額だけ抽出する。
         df_all.drop([0,1] , inplace = True)
         df_all.drop(df_all.columns[1:14] , axis = 1 , inplace = True)
