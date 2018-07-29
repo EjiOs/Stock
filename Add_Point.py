@@ -12,7 +12,7 @@ class Add_Point:
         df['p_s'] = df['設立年月日'].apply(self.point_s)
         df['p_j'] = df['上場年月日'].apply(self.point_j)
         df['p_t'] = df['時価総額（百万円）'].apply(self.point_total)
-        df['p_cf'] = df[['前期営業CF' , '今期営業CF']].apply(self.p_cf , axis = 1)
+        df['p_cf'] = df[['前期営業CF','今期営業CF']].apply(self.p_cf , axis = 1)
         df['p_b_sl'] = df[['決算前々期売上高' , '決算前期売上高']].apply(self.p_b_sale , axis = 1)
         df['p_n_sl'] = df[['決算前期売上高' , '決算売上高']].apply(self.p_n_sale , axis = 1)
         df['p_sl'] = df[['決算前々期売上高' , '決算前期売上高' , '決算売上高']].apply(self.p_sale , axis = 1)
