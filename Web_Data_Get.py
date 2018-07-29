@@ -104,8 +104,9 @@ class Web_Data_Get:
 
         driver.find_elements_by_class_name('nav-tab-01-jp')[0].find_elements_by_tag_name('li')[5].find_elements_by_tag_name('a')[0].click()
 
-        soup = BeautifulSoup(driver.page_source,'lxml')
-        iframe = soup.find('iframe',id = 'J010101-008-1')
+        soup = BeautifulSoup(driver.page_source,'html.parser')#'lxml')
+        #iframe = soup.find('iframe',id = 'J010101-008-1')
+        iframe = soup.select('#J010101-008-1')[0]
         Url = iframe['src']
         return Url
         driver.quit()
