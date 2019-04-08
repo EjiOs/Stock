@@ -1,7 +1,6 @@
 from Csv_To_Pandas import Csv_To_Pandas
 import datetime
 from Web_Data_Get import Web_Data_Get
-#from Add_Point import Add_Point
 import shelve
 import datetime as dt
 #自作クラスをインスタンス化、csvをデータフレームに直す。
